@@ -29,7 +29,7 @@ const messageColors = {
 
 export const UploadMessage = styled.p`
   display: flex;
-  color: ${props => messageColors[props.type || "deafult"]};
+  color: ${props => messageColors[props.type || "default"]};
   justify-content: center;
   align-items: center;
   padding: 15px 0;
