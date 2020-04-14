@@ -22,7 +22,7 @@ const FileList = () => (
                         path: { stroke: '#7159c1' }
                     }}
                     strokeWidth={10}
-                    percentage={60}
+                    value={50}
                 />
 
                 <a
