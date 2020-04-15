@@ -4,7 +4,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import { Container, FileInfo, Preview } from './styles';
 import { MdCheckCircle, MdError, MdLink } from 'react-icons/md';
 
-const FileList = ({ files }) => (
+const FileList = ({ files, onDelete }) => (
     <Container>
         {files.map(uploadedFile => (
             <li key={uploadedFile.id}>
@@ -15,7 +15,7 @@ const FileList = ({ files }) => (
                         <span> 
                             {uploadedFile.readableSize} 
                             {!! uploadedFile.url && (
-                                <button onClick={() => {}}> Excluir </button>
+                                <button onClick={() => onDelete(uploadedFile.id)}> Excluir </button>
                             )} 
                         </span>
                     </div>
