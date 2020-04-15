@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { uniqueId } from 'lodash';
-import { filesize } from 'filesize';
+import filesize from 'filesize';
 
 import GlobalStyle from './styles/global';
 import { Container, Content } from './styles';
