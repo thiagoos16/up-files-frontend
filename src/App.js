@@ -23,7 +23,7 @@ class App extends Component {
       uploadedFiles: response.data.map(file => ({
         id: file._id,
         name: file.name,
-        readableSize: filesize(file.sie),
+        readableSize: filesize(file.size),
         preview: file.url,
         uploaded: true,
         url: file.url
@@ -57,12 +57,12 @@ class App extends Component {
     }) })
   }
 
-  processUpload = (uploadedFiles) => {
+  processUpload = (uploadedFile) => {
     const data = new FormData();
 
     data.append('file', uploadedFile.file, uploadedFile.name);
 
-    api.post('post', data, {
+    api.post('uploads', data, {
       onUploadProgress: e => {
         const progress =  parseInt(Math.round((e.loaded * 100) / e.total));
 
