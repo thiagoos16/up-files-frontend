@@ -35,7 +35,7 @@ const FileList = ({ files, onDelete }) => (
 
                     {uploadedFile.url && (
                         <a
-                            href=""
+                            href={uploadedFile.url}
                             tarfet="_blank"
                             rel="noopener noreferrer"
                         >
